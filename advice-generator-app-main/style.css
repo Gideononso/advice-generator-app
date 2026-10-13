@@ -1,0 +1,159 @@
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #202733;
+  color: #cee3e9;
+  font-family: "Manrope", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+}
+
+/* Advice card */
+.advice-card {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+
+  background-color: #313a49;
+  border-radius: 15px;
+
+  padding: 48px 40px 72px;
+  text-align: center;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* Advice number */
+h1 {
+  color: #53ffaa;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+/* Advice text */
+#advice-text {
+  color: #cee3e9;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+
+  margin-bottom: 32px;
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.divider span {
+  flex: 1;
+  height: 1px;
+  background-color: #4f5d74;
+}
+
+.divider-icon {
+  flex-shrink: 0;
+}
+
+/* Dice button */
+#generate-btn {
+  position: absolute;
+  left: 50%;
+  bottom: -32px;
+  transform: translateX(-50%);
+
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+  background-color: #53ffaa;
+  color: #202733;
+
+  cursor: pointer;
+  transition: box-shadow 0.25s ease;
+}
+
+#generate-btn:hover {
+  box-shadow: 0 0 35px rgba(83, 255, 170, 0.65);
+}
+
+#generate-btn:focus-visible {
+  outline: 3px solid #cee3e9;
+  outline-offset: 4px;
+}
+
+#generate-btn:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+/* Footer */
+.attribution {
+  position: fixed;
+  bottom: 12px;
+  left: 0;
+  width: 100%;
+
+  font-size: 11px;
+  text-align: center;
+  color: #cee3e9;
+}
+
+.attribution a {
+  color: #53ffaa;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  body {
+    padding: 24px 16px;
+  }
+
+  .advice-card {
+    padding: 40px 24px 64px;
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+  }
+
+  #advice-text {
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 1.4;
+    margin-bottom: 24px;
+  }
+
+  #generate-btn {
+    width: 64px;
+    height: 64px;
+  }
+}
