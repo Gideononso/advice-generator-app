@@ -51,3 +51,4 @@ async function generateAdvice() {
 
 // Generate new advice when the dice button is clicked
 generateBtn.addEventListener("click", generateAdvice);
+generateAdvice();
